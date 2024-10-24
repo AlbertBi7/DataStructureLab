@@ -10,7 +10,7 @@ void merge(int array[], int L, int M, int R) {
     for (i = 0; i < n1; i++) {
         Left[i] = array[L + i];
     }
-    for (j = 0; j < n2; j++) {  // Fixed here
+    for (j = 0; j < n2; j++) {  
         Right[j] = array[M + 1 + j];
     }
 
@@ -44,7 +44,7 @@ void merge(int array[], int L, int M, int R) {
 
 void mergeSort(int array[], int L, int R) {
     if (L < R) {
-        int M = L + (R - L) / 2;  // Fixed here
+        int M = L + (R - L) / 2; 
         mergeSort(array, L, M);
         mergeSort(array, M + 1, R);
         merge(array, L, M, R);
